@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayank Singh Rajput | Portfolio</title>
+    
     <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="theme-1"> <nav>
+<body class="theme-1">
+
+<nav>
     <h2 onclick="showPage('home')">Mayank Singh Rajput 💻</h2>
     <ul>
         <li onclick="showPage('home')">Home</li>
@@ -69,15 +75,17 @@
 
 <section id="projects" class="page">
     <h1>My Projects 🚀</h1>
-    <div class="project-card">
-        <h3>Movie Rental System</h3>
-        <p>A comprehensive system built for learning database management and user interfaces.</p>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Movie Rental System</h3>
+            <p>A comprehensive system built for learning database management and user interfaces. Optimized for efficient data retrieval and clean UX.</p>
+        </div>
     </div>
 </section>
 
 <section id="contact" class="page">
     <h1>Contact Me 📩</h1>
-    <form class="contact-form">
+    <form class="contact-form" id="contactForm">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" rows="6" required></textarea>
@@ -88,5 +96,6 @@
 <footer>© 2026 Mayank Singh Rajput</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
