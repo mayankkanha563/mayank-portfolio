@@ -63,22 +63,23 @@ nav li:hover {
 .profile-number {
   width: 170px;
   height: 170px;
-  border-radius: 50%;
-  background: #243b55;
+  border-radius: 50%; /* Makes the container a circle */
+  background: #243b55; /* Optional: Background color */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
   font-weight: bold;
-  color: #ffd700;
+  color: #ffd700; /* Color for text if it shows */
   border: 5px solid white;
   margin: 0 auto 20px auto;
 }
 
 .profile-number img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100%;  /* Makes the image fill the circle */
+  height: 100%; /* Makes the image fill the circle */
+  border-radius: 50%; /* Ensures the image itself is a circle */
+  object-fit: cover; /* Ensures the image fits perfectly without stretching */
 }
 
 /* Skill Bars */
