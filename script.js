@@ -1,73 +1,59 @@
-// 1. Page Navigation Logic
+// 1. Navigation Logic
 function showPage(pageId) {
     $('.page').removeClass('active');
     $(`#${pageId}`).addClass('active');
     
-    // Restart animations if returning to home
-    if(pageId === 'home') {
+    if (pageId === 'home') {
         animateSkills();
     }
 }
 
-// 2. Typing Effect
+// 2. Typing Effect (Inside Home Only)
 const text = "Welcome To My Portfolio ✨";
 let i = 0;
-function typeEffect() {
+function type() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typeEffect, 100);
+        setTimeout(type, 100);
     }
 }
 
-// 3. Load Skills from JSON & Animate
+// 3. Load & Animate Skills
 function loadSkills() {
     $.getJSON("skills.json", function(data) {
-        let skillsHtml = '';
-        data.forEach(skill => {
-            skillsHtml += `
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>${skill.name}</span>
-                        <span class="percent-text" data-target="${skill.percent}">0%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-progress" style="background: ${skill.color}" data-percent="${skill.percent}"></div>
-                    </div>
-                </div>`;
+        let html = '';
+        data.forEach(s => {
+            html += `
+            <div class="skill-item">
+                <div style="display:flex; justify-content:space-between; font-size:14px; margin-bottom:5px;">
+                    <strong>${s.name}</strong><span>${s.percent}%</span>
+                </div>
+                <div class="skill-bar-bg">
+                    <div class="skill-progress" style="background:${s.color}" data-val="${s.percent}"></div>
+                </div>
+            </div>`;
         });
-        $('#skills-list').html(skillsHtml);
-        animateSkills(); // Run animation after loading
+        $('#skills-list').html(html);
+        setTimeout(animateSkills, 300);
     });
 }
 
 function animateSkills() {
     $('.skill-progress').each(function() {
-        const percent = $(this).data('percent');
-        $(this).css('width', percent + '%');
-    });
-
-    // Count up percentage text
-    $('.percent-text').each(function() {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).data('target')
-        }, {
-            duration: 1000,
-            step: function(now) {
-                $(this).text(Math.ceil(now) + '%');
-            }
-        });
+        $(this).css('width', $(this).data('val') + '%');
     });
 }
 
-// 4. Theme Toggle
+// 4. Three-Way Theme Toggle
+let currentTheme = 1;
 $('#themeBtn').click(function() {
-    $('body').toggleClass('light-mode');
-    $(this).text($('body').hasClass('light-mode') ? "🌙 Dark BG" : "💡 Light BG");
+    $('body').removeClass(`theme-${currentTheme}`);
+    currentTheme = (currentTheme % 3) + 1;
+    $('body').addClass(`theme-${currentTheme}`);
 });
 
-// Initialization
 $(document).ready(function() {
-    typeEffect();
+    type();
     loadSkills();
 });
