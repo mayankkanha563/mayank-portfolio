@@ -1,92 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayank Singh Rajput | Portfolio</title>
-  
-  <!-- Linking to External CSS -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Singh Rajput | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
-  <h2>Mayank Singh Rajput 💻</h2>
-  <ul>
-    <li onclick="showPage('home')">Home</li>
-    <li onclick="showPage('about')">About</li>
-    <li onclick="showPage('projects')">Projects</li>
-    <li onclick="showPage('contact')">Contact</li>
-  </ul>
-  <button id="themeBtn" class="theme-btn">💡 Light BG</button>
+    <h2 onclick="showPage('home')">Mayank Singh Rajput 💻</h2>
+    <ul>
+        <li onclick="showPage('home')">Home</li>
+        <li onclick="showPage('about')">About</li>
+        <li onclick="showPage('projects')">Projects</li>
+        <li onclick="showPage('contact')">Contact</li>
+    </ul>
+    <button id="themeBtn" class="theme-btn">💡 Light BG</button>
 </nav>
 
-<!-- Home Section -->
 <section id="home" class="page active">
-  <div class="profile-number">
-    <img src="assets/Mayank.image1.jpeg" alt="Profile Image"> <!-- Update the file name here -->
-    <span>7</span>
-  </div>
-</section>
-  <h1 id="typing"></h1>
-  <p>Hello, I am Mayank 🌟<br>BSc IT Student | Learning HTML, CSS, JS & jQuery 💻</p>
+    <div class="profile-container">
+        <div class="profile-circle">
+            <img src="assets/Mayank.image1.jpeg" alt="Mayank Singh Rajput">
+        </div>
+    </div>
+    
+    <h1 id="typing"></h1>
+    <p class="intro-text">Hello, I am Mayank 🌟<br>BSc IT Student | Learning Full Stack Web Dev</p>
 
-  <!-- Skill Visualization (Bars) -->
-  <div id="home-skills">
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="skill-bar"><div class="skill-progress" data-percent="90" style="background: #00FA9A;">0%</div></div>
+    <div id="skills-container">
+        <h3 class="skill-title">Technical Expertise</h3>
+        <div id="skills-list"></div>
     </div>
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="skill-bar"><div class="skill-progress" data-percent="85" style="background: #00BFFF;">0%</div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">DBMS</div>
-      <div class="skill-bar"><div class="skill-progress" data-percent="75" style="background: #FFD700;">0%</div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">JavaScript</div>
-      <div class="skill-bar"><div class="skill-progress" data-percent="80" style="background: #32CD32;">0%</div></div>
-    </div>
-  </div>
 </section>
 
-<!-- About Section -->
 <section id="about" class="page">
-  <h1>About Me ✨</h1>
-  <p>I am a BSc IT student from Mumbai University passionate about programming, building projects, and learning web technologies including HTML, CSS, JavaScript, and jQuery.</p>
+    <h1>About Me ✨</h1>
+    <div class="content-card">
+        <p>I am a BSc IT student from Mumbai University. I am passionate about programming and building clean, functional web applications.</p>
+    </div>
 </section>
 
-<!-- Projects Section -->
 <section id="projects" class="page">
-  <h1>My Projects 🚀</h1>
-  <div class="project">
-    <h3>Movie Rental System</h3>
-    <p>Project built for learning purposes</p>
-  </div>
+    <h1>My Projects 🚀</h1>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Movie Rental System</h3>
+            <p>A system designed to manage movie databases and user rentals.</p>
+        </div>
+    </div>
 </section>
 
-<!-- Contact Section -->
 <section id="contact" class="page">
-  <h1>Contact Me 📩</h1>
-  <form class="contact-form" id="contactForm">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+    <h1>Contact Me 📩</h1>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
-<!-- Footer -->
 <footer>© 2026 Mayank Singh Rajput</footer>
 
-<!-- Linking to External JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
