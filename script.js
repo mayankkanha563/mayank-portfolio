@@ -1,8 +1,14 @@
-// Page Navigation
-function showPage(page){ $(".page").removeClass("active"); $("#" + page).addClass("active"); }
+// Page Navigation Function
+function showPage(page) {
+  // Hide all pages
+  $(".page").removeClass("active");
+  
+  // Show the selected page
+  $("#" + page).addClass("active");
+}
 
-// Keyboard Navigation
-$(document).keydown(function(e){ 
+// Keyboard Navigation (Optional for faster switching)
+$(document).keydown(function(e) { 
   let key = e.key.toLowerCase(); 
   if(key === 'h') showPage('home');
   if(key === 'a') showPage('about');
