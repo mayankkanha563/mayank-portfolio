@@ -2,21 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mayank Singh Rajput | Portfolio</title>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Link to External CSS -->
+  
+  <!-- Linking to External CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="theme1">
+<body>
 
 <!-- Navbar -->
 <nav>
@@ -32,12 +27,31 @@
 
 <!-- Home Section -->
 <section id="home" class="page active">
-  <div class="profile-number">7</div>
+  <div class="profile-number">
+    <img src="assets/profile.jpg" alt="Profile Image">
+    <span>7</span>
+  </div>
   <h1 id="typing"></h1>
   <p>Hello, I am Mayank 🌟<br>BSc IT Student | Learning HTML, CSS, JS & jQuery 💻</p>
-  <!-- Embedded Skills -->
-  <div id="home-skills" style="margin-top:40px; max-width:600px; margin-left:auto; margin-right:auto; text-align:left;">
-    <!-- Skill Bars will be loaded here -->
+
+  <!-- Skill Visualization (Bars) -->
+  <div id="home-skills">
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="skill-bar"><div class="skill-progress" data-percent="90" style="background: #00FA9A;">0%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="skill-bar"><div class="skill-progress" data-percent="85" style="background: #00BFFF;">0%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">DBMS</div>
+      <div class="skill-bar"><div class="skill-progress" data-percent="75" style="background: #FFD700;">0%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-progress" data-percent="80" style="background: #32CD32;">0%</div></div>
+    </div>
   </div>
 </section>
 
@@ -50,14 +64,15 @@
 <!-- Projects Section -->
 <section id="projects" class="page">
   <h1>My Projects 🚀</h1>
-  <!-- Project Details will go here -->
+  <div class="project">
+    <h3>Movie Rental System</h3>
+    <p>Project built for learning purposes</p>
+  </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="page">
   <h1>Contact Me 📩</h1>
-  <p>Email: mayank@email.com</p>
-  <p>Phone: 1234567890</p>
   <form class="contact-form" id="contactForm">
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
@@ -66,9 +81,11 @@
   </form>
 </section>
 
+<!-- Footer -->
 <footer>© 2026 Mayank Singh Rajput</footer>
 
-<!-- Link to External JS -->
+<!-- Linking to External JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
