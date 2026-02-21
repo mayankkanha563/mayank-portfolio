@@ -1,7 +1,7 @@
 [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "DBMS",
-  "C++"
+  { "name": "HTML", "percent": 90, "color": "#e34c26" },
+  { "name": "CSS", "percent": 85, "color": "#264de4" },
+  { "name": "JavaScript", "percent": 80, "color": "#f7df1e" },
+  { "name": "DBMS", "percent": 75, "color": "#4479a1" },
+  { "name": "jQuery", "percent": 70, "color": "#0769ad" }
 ]
