@@ -1,7 +1,6 @@
 [
-  { "name": "HTML", "percent": 90, "color": "#e34c26" },
-  { "name": "CSS", "percent": 85, "color": "#264de4" },
-  { "name": "JavaScript", "percent": 80, "color": "#f7df1e" },
-  { "name": "DBMS", "percent": 75, "color": "#4479a1" },
-  { "name": "jQuery", "percent": 70, "color": "#0769ad" }
+  { "name": "HTML", "percent": 90, "color": "#E44D26" },
+  { "name": "CSS", "percent": 85, "color": "#2196F3" },
+  { "name": "JavaScript", "percent": 80, "color": "#FFCA28" },
+  { "name": "DBMS", "percent": 75, "color": "#4CAF50" }
 ]
